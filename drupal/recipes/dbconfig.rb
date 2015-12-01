@@ -1,6 +1,6 @@
 ## Recipe to set-up the Drupal 6 db settings file (/dbconfig.php)
 node[:deploy].each do |app_name, deploy|
-	template "#{deploy[:deploy_to]}/sites/default/dbconfig.php" do
+	template "#{deploy[:deploy_to]}/current/sites/default/dbconfig.php" do
 		source "dbconfig.php.erb"
 		mode 0664
 		group deploy[:group]
