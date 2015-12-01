@@ -1,6 +1,6 @@
 ## Recipe to set-up the Drupal 6 settings file (/settings.php)
 node[:deploy].each do |app_name, deploy|
-	template "#{deploy[:deploy_to]}/sites/default/settings.php" do
+	template "#{deploy[:deploy_to]}/current/sites/default/settings.php" do
 		source "settings.php.erb"
 		mode 0664
 		group deploy[:group]
