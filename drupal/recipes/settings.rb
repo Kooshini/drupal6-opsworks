@@ -12,8 +12,7 @@ node[:deploy].each do |app_name, deploy|
 			:DB_HOST => deploy[:environment_variables][:DB_HOST],
 			:DB_NAME => deploy[:environment_variables][:DB_DATABASE],
 			:DB_USER => deploy[:environment_variables][:DB_USERNAME],
-			:DB_PASS => deploy[:environment_variables][:DB_PASSWORD],
-			:REDIS_HOST => deploy[:environment_variables][:REDIS_HOST]
+			:DB_PASS => deploy[:environment_variables][:DB_PASSWORD]
 		})
 	end
 end
