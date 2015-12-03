@@ -2,7 +2,7 @@
 	node[:deploy].each do |app_name, deploy|
 			directory "#{deploy[:deploy_to]}/current/sites/default/files" do 
 			  mode 0777
-			  owner 'deploy'
+			  owner 'apache'
 			  group 'apache'
 			  recursive true
 			  action :create
