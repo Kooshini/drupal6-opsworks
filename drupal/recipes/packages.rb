@@ -4,13 +4,13 @@ node[:deploy].each do |app_name, deploy|
 		command 'sudo yum update'
 	end
 	# Required
-	package 'php'
-	package 'php-pdo'
-	package 'php-mcrypt'
-	package 'php-curl'
-	package 'php-json'
-	package 'php-bcmath'
-	package 'php-mbstring'
+	package 'php56'
+	package 'php56-pdo'
+	package 'php56-mcrypt'
+	package 'php56-curl'
+	package 'php56-json'
+	package 'php56-bcmath'
+	package 'php56-mbstring'
 	# Common
 	package 'ImageMagick'
 	package 'php-pecl-imagick'
